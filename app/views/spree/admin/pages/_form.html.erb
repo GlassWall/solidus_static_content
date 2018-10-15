@@ -19,6 +19,12 @@
       <%= f.error_message_on :body %>
     <% end %>
 
+    <%= f.field_container :summary do %>
+      <%= f.label :summary %> <span class="required">*</span><br />
+      <%= f.text_area :summary, {rows: 2, :class => 'fullwidth'} %>
+      <%= f.error_message_on :summary %>
+    <% end %>
+
   </div>
   <div class="right four columns omega" data-hook="admin_page_form_right">
 
@@ -62,13 +68,18 @@
       <%= f.label :render_layout_as_partial %>
     <% end %>
 
+    <%= f.field_container :summary_checkout do %>
+      <%= f.check_box :summary_checkout %>
+      <%= f.label :summary_checkout %>
+    <% end %>
+
     <%= f.field_container :stores do %>
-      <%= f.label :stores, Spree.t(:stores)%><br />
+      <%= f.label :stores, t('spree.stores')%><br />
       <% Spree::Store.all.each do |store| %>
         <%= check_box_tag "page[store_ids][]", store.id, @page.stores.include?(store) %> <%= store.name %>
       <% end %>
     <% end %>
-    
+
   </div>
 
   <div data-hook="admin_page_form_meta" class="alpha omega twelve columns">

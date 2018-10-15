@@ -4,7 +4,7 @@ class Spree::Page < ActiveRecord::Base
   has_and_belongs_to_many :stores, :join_table => 'spree_pages_stores'
 
   validates_presence_of :title
-  validates_presence_of [:slug, :body], :if => :not_using_foreign_link?
+  validates_presence_of [:slug, :body, :summary], :if => :not_using_foreign_link?
   validates_presence_of :layout, :if => :render_layout_as_partial?
 
   validates :slug, :uniqueness => true, :if => :not_using_foreign_link?

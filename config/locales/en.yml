@@ -17,6 +17,9 @@ en:
         slug: Slug
         title: Title
         visible: Visible
+        summary: Summary
+        summary_checkout: Show Summary in Checkout
+
     models:
       spree/page:
         few: Pages
