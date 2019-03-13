@@ -1,5 +1,7 @@
 <% content_for :page_actions do %>
-  <li><%= button_link_to t('spree.static_content.new_page'), new_object_url, id: 'admin_new_page' %></li>
+  <% if can? :create, Spree::Page %>
+    <li><%= button_to t('spree.static_content.new_page'), new_object_url, id: 'admin_new_page', method: :get %></li>
+  <% end %>
 <% end %>
 
 <% content_for :page_title do %>
@@ -36,8 +38,10 @@
           <%= content_tag(:i, '', :class => 'icon-ok green') if page.visible %>
         </td>
         <td class="actions" data-hook="admin_pages_index_row_actions">
-          <%= link_to_edit page, :no_text => true %>
-          <%= link_to_delete page, :no_text => true %>
+          <% if can? :manage, Spree::Page %>
+            <%= link_to_edit page, :no_text => true %>
+            <%= link_to_delete page, :no_text => true %>
+          <% end %>
         </td>
       </tr>
     <% end %>

@@ -1,7 +1,8 @@
 FactoryBot.define do
   factory :page, class: Spree::Page do
     sequence(:title) { |n| "Page #{n}" }
-    body  "This is the body of the page"
+    body  { "This is the body of the page" }
+    summary { "summary" }
 
     sequence(:slug) { |n| "/page#{n}" }
 

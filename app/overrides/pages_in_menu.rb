@@ -3,7 +3,7 @@ Deface::Override.new(:virtual_path => "spree/admin/shared/_menu",
                      :insert_bottom => "[data-hook='admin_tabs']",
                      :disabled => false) do
                       <<-HTML
-                        <% if can? :admin, Spree::Page %>
+                        <% if can? :display, Spree::Page %>
                           <%= tab(:pages, label: 'Pages', icon: 'file-text') %>
                         <% end %>
                       HTML

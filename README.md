@@ -25,6 +25,12 @@ $ bundle install
 $ bundle exec rails g solidus_static_content:install
 ```
 
+If you are using the extension [solidus_user_roles](https://github.com/boomerdigital/solidus_user_roles), you need to run the following command to install the Permission Sets that you can assign to particular user roles:
+
+```shell
+bundle exec rake solidus_static_content:load_seeds
+```
+
 That's all!
 
 
