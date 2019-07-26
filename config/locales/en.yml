@@ -27,6 +27,7 @@ en:
         one: Page
         other: Pages
   spree:
+    stores: Stores
     admin:
       tab:
         Pages: Pages
