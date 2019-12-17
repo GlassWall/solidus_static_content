@@ -1,5 +1,5 @@
 ---
-es:
+es-MX:
   activerecord:
     attributes:
       spree/page:
@@ -17,9 +17,6 @@ es:
         slug: Slug
         title: Título
         visible: Visible
-        summary: Resumen
-        summary_checkout: Mostrar resumen en checkout
-
     models:
       spree/page:
         few: Páginas
