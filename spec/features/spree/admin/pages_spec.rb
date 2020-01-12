@@ -23,6 +23,7 @@ RSpec.feature 'Admin Static Content', js: true do
       fill_in 'page_title', with: 'Contact us'
       fill_in 'page_slug', with: 'contact-us'
       fill_in 'page_body', with: 'hello..'
+      fill_in 'page_summary', with: 'summary..'
 
       fill_in 'page_meta_title', with: 'Contact us'
       fill_in 'page_meta_keywords', with: 'spree, contact'
